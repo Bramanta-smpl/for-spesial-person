@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Ayang Tercinta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="greeting"></h1>
+        <p>Terima kasih telah menjadi bagian cerita 
+            dari anak nakal ini, Yohanes Bramanta. 
+            Terima kasih juga atas semua experience 
+            yang kita saling berikan, maaf kalo selama 
+            3 tahun ini Bram selalu menyusahkan kamu, 
+            maaf kalo kamu merasa paling dominan di 
+            hubungan ini, maaf juga kalo Bram selalu 
+            membuat kamu kecewa. Sekali lagi Terima 
+            Kasih, Love You ❤️</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded' , function () {
+            const userName = localStorage.getItem('userName');
+            if (userName) {
+                document.getElementById('greeting').innerText = `Halo ${userName} ❤️`;
+            } else {
+                window.location.href = 'Login-page.html';
+            }
+        });
+    </script>
+</body>
+</html>
